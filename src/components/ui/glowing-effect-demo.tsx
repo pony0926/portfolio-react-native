@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { Box, Lock, Search, Settings, Sparkles, ExternalLink } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
@@ -65,7 +66,6 @@ const techIconMap: Record<string, string> = {
   'TensorFlow Lite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
   'Flask': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg',
   'OCPP': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  'SQLite': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
   'AsyncStorage': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   'Background Tasks': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   'Sync': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
@@ -130,14 +130,35 @@ const microProjectsData = [
   }
 ];
 
+// Color gradients for each card - clean and modern colors
+const cardGradients = [
+  'linear-gradient(163deg, #00ff75 0%, #3700ff 100%)', // Blue-Green
+  'linear-gradient(163deg, #ff6b6b 0%, #ee5a6f 100%)', // Pink-Red
+  'linear-gradient(163deg, #4ecdc4 0%, #44a08d 100%)', // Teal
+  'linear-gradient(163deg, #f093fb 0%, #f5576c 100%)', // Purple-Pink
+  'linear-gradient(163deg, #4facfe 0%, #00f2fe 100%)', // Blue-Cyan
+  'linear-gradient(163deg, #43e97b 0%, #38f9d7 100%)', // Green-Cyan
+];
+
 export default function GlowingEffectDemo() {
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
       {microProjectsData.map((project, idx) => (
-        <GridItem key={project.title} project={{
-          ...project,
-          image: project.image && project.image.startsWith('/') ? 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80' : project.image
-        }} />
+        <motion.li
+          key={project.title}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: idx * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <GridItem 
+            project={{
+              ...project,
+              image: project.image && project.image.startsWith('/') ? 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80' : project.image
+            }}
+            index={idx}
+          />
+        </motion.li>
       ))}
     </ul>
   );
@@ -154,12 +175,29 @@ interface Project {
 
 interface GridItemProps {
   project: Project;
+  index: number;
 }
 
-const GridItem = ({ project }: GridItemProps) => {
+const GridItem = ({ project, index }: GridItemProps) => {
+  const gradient = cardGradients[index % cardGradients.length];
+  const hoverColors = [
+    'rgba(0, 255, 117, 0.30)', // Blue-Green
+    'rgba(255, 107, 107, 0.30)', // Pink-Red
+    'rgba(78, 205, 196, 0.30)', // Teal
+    'rgba(240, 147, 251, 0.30)', // Purple-Pink
+    'rgba(79, 172, 254, 0.30)', // Blue-Cyan
+    'rgba(67, 233, 123, 0.30)', // Green-Cyan
+  ];
+  const hoverColor = hoverColors[index % hoverColors.length];
+
   return (
-    <li className="min-h-[16rem] list-none">
-      <div className="micro-project-card">
+    <div className="h-[16rem] list-none">
+      <div 
+        className="micro-project-card h-full"
+        style={{
+          backgroundImage: gradient,
+        }}
+      >
         <div
           className="micro-project-card-inner relative h-full rounded-2xl border-2 border-white/30 hover:border-blue-400 transition-colors duration-300 p-4 overflow-hidden shadow-2xl group card-shadow-effect project-card-hover input-shadow-effect"
           style={{
@@ -167,6 +205,18 @@ const GridItem = ({ project }: GridItemProps) => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
+          }}
+          onMouseEnter={(e) => {
+            const card = e.currentTarget.closest('.micro-project-card') as HTMLElement;
+            if (card) {
+              card.style.boxShadow = `0px 0px 30px 1px ${hoverColor}`;
+            }
+          }}
+          onMouseLeave={(e) => {
+            const card = e.currentTarget.closest('.micro-project-card') as HTMLElement;
+            if (card) {
+              card.style.boxShadow = '';
+            }
           }}
         >
         <GlowingEffect
@@ -226,6 +276,6 @@ const GridItem = ({ project }: GridItemProps) => {
         </div>
         </div>
       </div>
-    </li>
+    </div>
   );
 }; 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
 
 interface TimelineItem {
@@ -57,11 +58,25 @@ const timelineData: TimelineItem[] = [
 const About = () => {
   return (
     <section id="about" className="section-container">
-      <h2 className="section-title">About Me</h2>
+      <motion.h2 
+        className="section-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        About Me
+      </motion.h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Tech Stack & Skills */}
-        <div className="lg:col-span-1">
+        <motion.div 
+          className="lg:col-span-1"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <Card className="h-full glass-card rounded-xl border-muted">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">Profile Summary</h3>
@@ -83,7 +98,7 @@ const About = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </motion.div>
         
         {/* Timeline */}
         <div className="lg:col-span-2">
@@ -92,7 +107,14 @@ const About = () => {
             
             <div className="space-y-16">
               {timelineData.map((item, idx) => (
-                <div key={item.id} className="relative pl-16 flex items-start group">
+                <motion.div 
+                  key={item.id} 
+                  className="relative pl-16 flex items-start group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.15 }}
+                  viewport={{ once: true }}
+                >
                   <div className="absolute left-0 top-1 w-12 h-12 bg-[#2a2a2a] border-2 border-[#60a5fa] flex items-center justify-center rounded-full z-10 group-hover:bg-[#3a3a3a] transition-colors">
                     {item.type === 'education' ? (
                       <GraduationIcon />
@@ -113,7 +135,7 @@ const About = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

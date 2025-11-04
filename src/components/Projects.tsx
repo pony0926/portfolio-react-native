@@ -620,7 +620,15 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-container relative">
-      <h2 className="section-title mb-8">Professional Experience</h2>
+      <motion.h2 
+        className="section-title mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Professional Experience
+      </motion.h2>
       
       {/* Project Description */}
       <motion.div 
@@ -669,10 +677,16 @@ const Projects = () => {
       {/* Walmart Modal */}
       <WalmartModal open={walmartModalOpen} onClose={() => setWalmartModalOpen(false)} />
       {/* Micro Projects Section */}
-      <div className="mt-16">
+      <motion.div 
+        className="mt-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h3 className="section-title mb-8">Micro Projects</h3>
         <GlowingEffectDemo />
-      </div>
+      </motion.div>
     </section>
   );
 };
