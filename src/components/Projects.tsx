@@ -15,56 +15,8 @@ const projectsData: Project[] = [
     description: (
       <div className="text-white space-y-4 leading-relaxed">
         <p className="text-gray-200 text-sm leading-relaxed">
-          Led the mobile modernization of Yahoo Mail Next, revamping its core architecture for both iOS and Android platforms using <span className="text-blue-400 font-semibold">React Native</span>. Built a unified codebase ensuring <span className="text-green-400 font-semibold">high performance</span>, <span className="text-purple-400 font-semibold">maintainability</span>, and <span className="text-yellow-400 font-semibold">seamless user experience</span> across devices.
+          Led the mobile modernization of Yahoo Mail Next, revamping its core architecture for both iOS and Android platforms using <span className="text-blue-400 font-semibold">React Native</span>.
         </p>
-        
-        <div className="space-y-3">
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg border border-blue-500/20">
-            <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-yellow-400 font-semibold text-sm">UI Optimization:</span>
-              <p className="text-gray-300 text-xs mt-1">Re-engineered rendering layer with <span className="text-blue-400">React Native Fabric renderer</span> for enhanced UI responsiveness and concurrent rendering.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-green-400 font-semibold text-sm">Offline-first Experience:</span>
-              <p className="text-gray-300 text-xs mt-1">Developed robust offline system using <span className="text-blue-400">SQLite</span> and <span className="text-blue-400">AsyncStorage</span> for message availability in low connectivity.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">
-            <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-purple-400 font-semibold text-sm">AI-Powered Features:</span>
-              <p className="text-gray-300 text-xs mt-1">Integrated Python microservices with <span className="text-blue-400">Flask</span> and <span className="text-blue-400">TensorFlow Lite</span> for smart replies and categorization.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-orange-900/20 to-red-900/20 rounded-lg border border-orange-500/20">
-            <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-orange-400 font-semibold text-sm">Push Notifications:</span>
-              <p className="text-gray-300 text-xs mt-1">Integrated <span className="text-blue-400">FCM</span> and <span className="text-blue-400">APNs</span> for real-time inbox updates and user engagement.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-lg border border-cyan-500/20">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-cyan-400 font-semibold text-sm">CI/CD Integration:</span>
-              <p className="text-gray-300 text-xs mt-1">Automated pipelines with <span className="text-blue-400">Expo</span>, <span className="text-blue-400">Bitrise</span>, and <span className="text-blue-400">GitHub Actions</span> for streamlined development workflow.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-4 p-3 bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-lg border border-emerald-500/30">
-          <p className="text-emerald-300 text-xs font-medium leading-relaxed">
-            Optimized for large inboxes and high throughput, delivering consistent, responsive experience for millions of users.
-          </p>
-        </div>
       </div>
     ),
     image: "/assets/img/Yahoo/main.jpeg", // Main image from Yahoo folder
@@ -78,64 +30,8 @@ const projectsData: Project[] = [
     description: (
       <div className="text-white space-y-4 leading-relaxed">
         <p className="text-gray-200 text-sm leading-relaxed">
-          Contributed to the development of the ChargePoint mobile platform, enabling electric vehicle (EV) drivers to locate, reserve, and manage charging stations in real-time. Built a comprehensive solution for the EV charging ecosystem with <span className="text-green-400 font-semibold">real-time data management</span> and <span className="text-blue-400 font-semibold">seamless user experience</span>.
+          Contributed to the development of the ChargePoint <span className="text-blue-400 font-semibold">mobile platform</span>, enabling <span className="text-blue-400 font-semibold">electric vehicle (EV)</span> drivers to locate, reserve, and manage <span className="text-blue-400 font-semibold">charging stations</span> in <span className="text-blue-400 font-semibold">real-time</span>.
         </p>
-        
-        <div className="space-y-3">
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-900/20 to-emerald-900/20 rounded-lg border border-green-500/20">
-            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-green-400 font-semibold text-sm">Real-time EV Charging Management:</span>
-              <p className="text-gray-300 text-xs mt-1">Developed interactive map interface displaying real-time charging station locations and status updates for seamless navigation.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-lg border border-blue-500/20">
-            <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-blue-400 font-semibold text-sm">Seamless User Experience:</span>
-              <p className="text-gray-300 text-xs mt-1">Implemented secure authentication with <span className="text-blue-400">OAuth2</span> and persistent session management using <span className="text-blue-400">SecureStore</span> and <span className="text-blue-400">AsyncStorage</span>.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">
-            <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-purple-400 font-semibold text-sm">UI/UX Design:</span>
-              <p className="text-gray-300 text-xs mt-1">Built scalable UI architecture with <span className="text-blue-400">React Native</span> and <span className="text-blue-400">TypeScript</span>, incorporating consistent design language for mobile-first experiences.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-orange-900/20 to-yellow-900/20 rounded-lg border border-orange-500/20">
-            <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-orange-400 font-semibold text-sm">Performance Optimization:</span>
-              <p className="text-gray-300 text-xs mt-1">Applied <span className="text-blue-400">lazy loading</span> and <span className="text-blue-400">code splitting</span> techniques to handle large station datasets efficiently.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-cyan-900/20 to-teal-900/20 rounded-lg border border-cyan-500/20">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-cyan-400 font-semibold text-sm">API Integration:</span>
-              <p className="text-gray-300 text-xs mt-1">Integrated <span className="text-blue-400">OCPP</span> and <span className="text-blue-400">GraphQL</span> to enable seamless communication between app and diverse EV hardware systems.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-indigo-900/20 to-blue-900/20 rounded-lg border border-indigo-500/20">
-            <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-indigo-400 font-semibold text-sm">CI/CD Implementation:</span>
-              <p className="text-gray-300 text-xs mt-1">Streamlined development pipeline with <span className="text-blue-400">Expo</span>, <span className="text-blue-400">Fastlane</span>, and <span className="text-blue-400">GitHub Actions</span> for continuous updates.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-4 p-3 bg-gradient-to-r from-emerald-900/30 to-green-900/30 rounded-lg border border-emerald-500/30">
-          <p className="text-emerald-300 text-xs font-medium leading-relaxed">
-            Showcased ability to create high-performance mobile applications while collaborating cross-functionally to integrate backend systems for real-time data management.
-          </p>
-        </div>
       </div>
     ),
     image: "/assets/img/ChargePoint/main.jpeg", // Main image from ChargePoint folder
@@ -149,72 +45,8 @@ const projectsData: Project[] = [
     description: (
       <div className="text-white space-y-4 leading-relaxed">
         <p className="text-gray-200 text-sm leading-relaxed">
-          Played a key role in developing <span className="text-purple-400 font-semibold">FDA-cleared digital therapeutics apps</span>, including reSET, reSET-O, and Somryst, built using <span className="text-blue-400 font-semibold">React Native</span> and <span className="text-blue-400 font-semibold">TypeScript</span> for iOS and Android platforms. Focused on delivering <span className="text-green-400 font-semibold">health-focused mobile applications</span> with both technical and regulatory compliance.
+          Played a key role in developing <span className="text-blue-400 font-semibold">FDA-cleared digital therapeutics apps</span>, including reSET, reSET-O, and Somryst, built using <span className="text-blue-400 font-semibold">React Native</span> and <span className="text-blue-400 font-semibold">TypeScript</span> for iOS and Android platforms.
         </p>
-        
-        <div className="space-y-3">
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">
-            <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-purple-400 font-semibold text-sm">FDA-Cleared Digital Health Solutions:</span>
-              <p className="text-gray-300 text-xs mt-1">Contributed to development and maintenance of digital therapeutic apps meeting <span className="text-blue-400">HIPAA</span> and <span className="text-blue-400">FDA compliance</span> requirements.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-lg border border-blue-500/20">
-            <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-blue-400 font-semibold text-sm">Code Refactoring and Optimization:</span>
-              <p className="text-gray-300 text-xs mt-1">Led migration from legacy <span className="text-blue-400">JavaScript</span> to <span className="text-blue-400">TypeScript</span>, introducing modular architecture and strict type definitions.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-900/20 to-emerald-900/20 rounded-lg border border-green-500/20">
-            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-green-400 font-semibold text-sm">Patient and Clinician Features:</span>
-              <p className="text-gray-300 text-xs mt-1">Designed reusable <span className="text-blue-400">React hooks</span> and components for patient onboarding, therapy modules, and clinician dashboards.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-orange-900/20 to-red-900/20 rounded-lg border border-orange-500/20">
-            <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-orange-400 font-semibold text-sm">AI Integration:</span>
-              <p className="text-gray-300 text-xs mt-1">Integrated <span className="text-blue-400">Python-based AI microservices</span> for analyzing speech data and providing cognitive biomarkers.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-cyan-900/20 to-teal-900/20 rounded-lg border border-cyan-500/20">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-cyan-400 font-semibold text-sm">Wearable Device Integration:</span>
-              <p className="text-gray-300 text-xs mt-1">Connected <span className="text-blue-400">Fitbit</span> and <span className="text-blue-400">Garmin SDKs</span> for real-time physiological data collection.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-indigo-900/20 to-purple-900/20 rounded-lg border border-indigo-500/20">
-            <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-indigo-400 font-semibold text-sm">Testing and Quality Assurance:</span>
-              <p className="text-gray-300 text-xs mt-1">Migrated testing framework to <span className="text-blue-400">Jest</span> and <span className="text-blue-400">React Native Testing Library</span> for FDA submission builds.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-emerald-900/20 to-green-900/20 rounded-lg border border-emerald-500/20">
-            <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-emerald-400 font-semibold text-sm">Cloud and Backend Integration:</span>
-              <p className="text-gray-300 text-xs mt-1">Developed secure cloud communication with <span className="text-blue-400">Firebase</span> and <span className="text-blue-400">REST APIs</span> for encrypted storage and HIPAA compliance.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-4 p-3 bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-lg border border-purple-500/30">
-          <p className="text-purple-300 text-xs font-medium leading-relaxed">
-            Emphasized ability to develop health-focused mobile applications that deliver both technical and regulatory compliance, contributing to the advancement of digital health solutions.
-          </p>
-        </div>
       </div>
     ),
     image: "/assets/img/Pear/1.webp", // First image from Pear folder
@@ -228,72 +60,8 @@ const projectsData: Project[] = [
     description: (
       <div className="text-white space-y-4 leading-relaxed">
         <p className="text-gray-200 text-sm leading-relaxed">
-          Contributed to the development of the Walmart Mobile Shopping App, enhancing the mobile shopping experience for millions of users. Focused on delivering <span className="text-blue-400 font-semibold">high-scale, enterprise-level mobile applications</span> with <span className="text-green-400 font-semibold">seamless user interactions</span> and <span className="text-purple-400 font-semibold">compliance with industry standards</span>.
+          Contributed to the development of the Walmart <span className="text-blue-400 font-semibold">Mobile Shopping App</span>, enhancing the <span className="text-blue-400 font-semibold">mobile shopping experience</span> for <span className="text-blue-400 font-semibold">millions of users</span>.
         </p>
-        
-        <div className="space-y-3">
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 rounded-lg border border-blue-500/20">
-            <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-blue-400 font-semibold text-sm">Feature Development for Mobile Shopping:</span>
-              <p className="text-gray-300 text-xs mt-1">Built and maintained <span className="text-blue-400">React Native</span> components for product listings, checkout flow, and user profile management on iOS and Android.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-green-900/20 to-emerald-900/20 rounded-lg border border-green-500/20">
-            <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-green-400 font-semibold text-sm">Real-Time Product APIs:</span>
-              <p className="text-gray-300 text-xs mt-1">Collaborated with backend teams to integrate mobile front-end with real-time product APIs backed by <span className="text-blue-400">MySQL</span> and <span className="text-blue-400">MongoDB</span>.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">
-            <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-purple-400 font-semibold text-sm">Personalization and Search:</span>
-              <p className="text-gray-300 text-xs mt-1">Developed personalized search and recommendation features using <span className="text-blue-400">Elasticsearch</span> and <span className="text-blue-400">Kafka</span> event streams.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-orange-900/20 to-yellow-900/20 rounded-lg border border-orange-500/20">
-            <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-orange-400 font-semibold text-sm">Performance Optimization:</span>
-              <p className="text-gray-300 text-xs mt-1">Focused on optimizing app performance by profiling API latency, reducing bundle size, and improving rendering efficiency for large catalog views.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-cyan-900/20 to-teal-900/20 rounded-lg border border-cyan-500/20">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-cyan-400 font-semibold text-sm">Cross-Functional Collaboration:</span>
-              <p className="text-gray-300 text-xs mt-1">Worked closely with backend developers to integrate secure order tracking and payment workflows using <span className="text-blue-400">Spring-based microservices</span>.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-indigo-900/20 to-blue-900/20 rounded-lg border border-indigo-500/20">
-            <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-indigo-400 font-semibold text-sm">Testing and Continuous Integration:</span>
-              <p className="text-gray-300 text-xs mt-1">Implemented unit and integration tests using <span className="text-blue-400">Mocha</span>, <span className="text-blue-400">Chai</span>, and <span className="text-blue-400">Enzyme</span> for stable CI pipelines.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start space-x-3 p-3 bg-gradient-to-r from-emerald-900/20 to-green-900/20 rounded-lg border border-emerald-500/20">
-            <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
-            <div>
-              <span className="text-emerald-400 font-semibold text-sm">Mobile Transactions and Compliance:</span>
-              <p className="text-gray-300 text-xs mt-1">Supported secure payment processing through <span className="text-blue-400">Spring-based microservices</span>, ensuring secure and compliant transactions.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-4 p-3 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-lg border border-blue-500/30">
-          <p className="text-blue-300 text-xs font-medium leading-relaxed">
-            Enhanced ability to work in high-scale, enterprise-level mobile applications, ensuring seamless user interactions and compliance with industry standards.
-          </p>
-        </div>
       </div>
     ),
     image: "/assets/img/Walmart/main.jpg", // Main image from Walmart folder

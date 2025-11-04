@@ -24,19 +24,30 @@ const Hero = () => {
       <div className="container mx-auto px-6 z-10 relative">
         <div className="max-w-6xl mx-auto text-center px-4">
           <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-relaxed mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-white"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="block">Hi, I am Alex Su</span>
-            <span className="block mt-2">
-              <span className="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">Senior React Native Engineer</span> <span className="text-white">specializing in<br className="hidden sm:block" /> cross-platform mobile development, AI integration,<br className="hidden sm:block" /> </span><span className="bg-gradient-to-r from-red-500 via-green-500 to-purple-500 text-transparent bg-clip-text">scalable backend development.</span>
+            <span className="block mb-4">Hi, I am Alex Su</span>
+            <span className="block mt-6">
+              <span className="block mb-3 sm:mb-4">
+                <span className="text-[#60a5fa] font-semibold">Senior React Native Engineer</span> <span className="text-white">specializing in</span>
+              </span>
+              <span className="block mb-3 sm:mb-4 text-white">
+                cross-platform mobile development, AI
+              </span>
+              <span className="block mb-3 sm:mb-4 text-white">
+                integration,
+              </span>
+              <span className="block">
+                <span className="text-[#60a5fa] font-semibold">scalable backend development.</span>
+              </span>
             </span>
           </motion.h1>
           
           <motion.h2 
-            className="text-lg md:text-xl text-gray-400 mb-8"
+            className="text-lg md:text-xl text-gray-400 mb-8 font-medium"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -49,12 +60,12 @@ const Hero = () => {
                 "Scalable backend systems",
                 "High-performance mobile solutions"
               ]} 
-              className="text-blue-400 font-medium" 
+              className="text-[#60a5fa] font-medium" 
             />
           </motion.h2>
           
           <motion.p 
-            className="text-md mb-10 text-gray-500"
+            className="text-base mb-10 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}

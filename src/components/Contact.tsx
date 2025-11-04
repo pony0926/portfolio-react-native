@@ -14,20 +14,20 @@ const DeveloperStats = () => (
     <CardContent>
       {/* Stats Grid */}
       <div className="grid grid-cols-2 gap-4 mb-8">
-        <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg p-4 border border-blue-500/30">
+        <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg p-4 border border-blue-500/30">
           <div className="text-2xl font-bold text-blue-400 mb-1">4+</div>
           <div className="text-xs text-gray-300">Companies</div>
         </div>
-        <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg p-4 border border-green-500/30">
-          <div className="text-2xl font-bold text-green-400 mb-1">30+</div>
+        <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg p-4 border border-blue-500/30">
+          <div className="text-2xl font-bold text-blue-400 mb-1">30+</div>
           <div className="text-xs text-gray-300">Technologies</div>
         </div>
-        <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg p-4 border border-purple-500/30">
-          <div className="text-2xl font-bold text-purple-400 mb-1">10+</div>
+        <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg p-4 border border-blue-500/30">
+          <div className="text-2xl font-bold text-blue-400 mb-1">10+</div>
           <div className="text-xs text-gray-300">Years Experience</div>
         </div>
-        <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg p-4 border border-orange-500/30">
-          <div className="text-2xl font-bold text-orange-400 mb-1">1</div>
+        <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg p-4 border border-blue-500/30">
+          <div className="text-2xl font-bold text-blue-400 mb-1">1</div>
           <div className="text-xs text-gray-300">Certification</div>
         </div>
       </div>

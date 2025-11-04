@@ -19,36 +19,36 @@ const timelineData: TimelineItem[] = [
   },
   {
     id: 2,
-    year: "Aug 2016 - Apr 2019",
-    title: "Software Developer, Walmart eCommerce Global",
+    year: "August 2016 - April 2019",
+    title: "Mobile Software Developer, Walmart eCommerce Global",
     description: "",
     type: "experience"
   },
   {
     id: 3,
-    year: "Apr 2019 - Dec 2020",
-    title: "Software Developer, Pear Therapeutics",
+    year: "April 2019 - December 2020",
+    title: "Mobile Software Developer, Pear Therapeutics",
     description: "",
     type: "experience"
   },
   {
     id: 4,
-    year: "Jan 2021 - Apr 2023",
-    title: "Senior Software Developer, Pear Therapeutics",
+    year: "January 2021 - April 2023",
+    title: "Senior Mobile Developer, Pear Therapeutics",
     description: "",
     type: "experience"
   },
   {
     id: 5,
-    year: "Jul 2023 - Feb 2025",
-    title: "Senior React Native Engineer, ChargePoint",
+    year: "July 2023 - February 2025",
+    title: "Senior React Native Developer, ChargePoint",
     description: "",
     type: "experience"
   },
   {
     id: 6,
-    year: "Feb 2025 - Sep 2025",
-    title: "Senior Software Engineer, Yahoo",
+    year: "February 2025 - September 2025",
+    title: "Senior React Native Engineer, Yahoo",
     description: "",
     type: "experience"
   },
@@ -69,48 +69,17 @@ const About = () => {
               {/* Profile Summary */}
               <div className="space-y-5 text-sm">
                 <p className="text-gray-300 leading-relaxed">
-                  Senior Software Engineer specializing in React Native and TypeScript, delivering
-                  cross‑platform mobile products at scale across Yahoo, ChargePoint, Pear Therapeutics,
-                  and Walmart eCommerce.
+                  Senior Software Engineer with 9 years of hands-on experience building and scaling mobile applications used by millions. Specialized in React Native, TypeScript, and Node.js, with a strong background in integrating real-time data, optimizing performance, and modernizing app architectures for iOS and Android.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-                    <span className="text-gray-400 leading-relaxed">
-                      Build maintainable architectures with Redux Toolkit, Context API, REST and GraphQL data layers.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-                    <span className="text-gray-400 leading-relaxed">
-                      Ship reliably with Bitrise, GitHub Actions, and Fastlane; support OTA updates and CI-first workflows.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-                    <span className="text-gray-400 leading-relaxed">
-                      Collaborate across backend stacks: Node.js, Express, PostgreSQL, MongoDB, MySQL; optimize with Redis & Kafka.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-                    <span className="text-gray-400 leading-relaxed">
-                      Add intelligent UX with Python/Flask services, PyTorch, and TensorFlow Lite.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-                    <span className="text-gray-400 leading-relaxed">
-                      Monitor and tune with Flipper, Firebase Analytics, Sentry, and Xcode Instruments.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-500"></span>
-                    <span className="text-gray-400 leading-relaxed">
-                      Focused on clean code, efficient delivery, and dependable systems that scale across teams.
-                    </span>
-                  </li>
-                </ul>
+                <p className="text-gray-300 leading-relaxed">
+                  Known for delivering stable, high-performing releases across complex ecosystems like Yahoo, ChargePoint, and Walmart, combining technical precision with practical problem-solving. Experienced in BLE integrations, push notification systems, and AI-driven personalization, while keeping codebases maintainable through modular design and type safety.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Comfortable working end-to-end—from building UI layers and managing app state to setting up CI/CD pipelines, automated testing, and Over-The-Air (OTA) updates. Experienced in agile environments where close coordination with backend engineers, designers, and product managers turns ideas into reliable, user-friendly mobile products.
+                </p>
+                <p className="text-gray-300 leading-relaxed italic">
+                  Grounded in real engineering work, not theory—focused on building fast, stable apps that stand up in production and improve with each release.
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -119,12 +88,12 @@ const About = () => {
         {/* Timeline */}
         <div className="lg:col-span-2">
           <div className="relative">
-            <div className="absolute left-6 top-5 bottom-5 w-1 bg-gradient-to-b from-blue-400 to-purple-500 shadow-lg rounded-full"></div>
+            <div className="absolute left-6 top-5 bottom-5 w-1 bg-[#3a3a3a] rounded-full"></div>
             
             <div className="space-y-16">
               {timelineData.map((item, idx) => (
                 <div key={item.id} className="relative pl-16 flex items-start group">
-                  <div className="absolute left-0 top-1 w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center rounded-full border-4 border-background z-10 shadow-lg group-hover:scale-110 transition">
+                  <div className="absolute left-0 top-1 w-12 h-12 bg-[#2a2a2a] border-2 border-[#60a5fa] flex items-center justify-center rounded-full z-10 group-hover:bg-[#3a3a3a] transition-colors">
                     {item.type === 'education' ? (
                       <GraduationIcon />
                     ) : item.type === 'experience' ? (
@@ -133,12 +102,12 @@ const About = () => {
                       <AwardIcon />
                     )}
                   </div>
-                  <Card className="glass-card rounded-xl border-muted shadow-xl group-hover:border-blue-400 transition-all w-full">
+                  <Card className="glass-card rounded-lg border-[#3a3a3a] group-hover:border-[#60a5fa] transition-colors w-full">
                     <CardContent className="p-6">
                       <div className="text-sm font-medium text-muted-foreground mb-1">
                         {item.year}
                       </div>
-                      <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">{item.title}</h3>
+                      <h3 className="text-xl font-semibold mb-2 text-[#60a5fa]">{item.title}</h3>
                       <p className="text-muted-foreground whitespace-pre-line">
                         {item.description}
                       </p>

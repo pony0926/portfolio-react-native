@@ -84,7 +84,7 @@ const microProjectsData = [
     title: "React Native Boilerplate",
     description: "Production-ready <span class='gradient-highlight'>React Native starter</span> with <span class='gradient-highlight'>TypeScript</span>, <span class='gradient-highlight'>Redux Toolkit</span>, and <span class='gradient-highlight'>navigation setup</span>.",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React Native", "TypeScript", "Redux Toolkit", "React Navigation", "Expo"],
+    tags: ["TypeScript", "Redux Toolkit", "Expo"],
     demoUrl: undefined,
     githubUrl: "https://github.com/alexsu/rn-boilerplate"
   },
@@ -92,7 +92,7 @@ const microProjectsData = [
     title: "AI Smart Reply Generator",
     description: "Mobile app with <span class='gradient-highlight'>TensorFlow Lite</span> integration for <span class='gradient-highlight'>AI-powered smart replies</span> and <span class='gradient-highlight'>message categorization</span>.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React Native", "TensorFlow Lite", "Python", "Flask", "AI"],
+    tags: ["TensorFlow Lite", "Python", "Flask", "MongoDB"],
     demoUrl: undefined,
     githubUrl: "https://github.com/alexsu/ai-smart-reply"
   },
@@ -100,7 +100,7 @@ const microProjectsData = [
     title: "EV Charging Station Finder",
     description: "Cross-platform app for <span class='gradient-highlight'>EV charging stations</span> with <span class='gradient-highlight'>real-time availability</span> and <span class='gradient-highlight'>OCPP integration</span>.",
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React Native", "GraphQL", "Node.js", "PostgreSQL", "OCPP"],
+    tags: ["GraphQL", "Node.js", "PostgreSQL", "Redis", "AWS"],
     demoUrl: undefined,
     githubUrl: "https://github.com/alexsu/ev-charging-finder"
   },
@@ -108,7 +108,7 @@ const microProjectsData = [
     title: "Offline-First Mail Client",
     description: "React Native mail client with <span class='gradient-highlight'>SQLite storage</span>, <span class='gradient-highlight'>background sync</span>, and <span class='gradient-highlight'>offline capabilities</span>.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React Native", "SQLite", "AsyncStorage", "Background Tasks", "Sync"],
+    tags: ["SQLite", "AsyncStorage", "WebSocket", "Express.js"],
     demoUrl: undefined,
     githubUrl: "https://github.com/alexsu/offline-mail-client"
   },
@@ -116,7 +116,7 @@ const microProjectsData = [
     title: "Healthcare Compliance Tracker",
     description: "HIPAA-compliant app for <span class='gradient-highlight'>patient data tracking</span> with <span class='gradient-highlight'>secure authentication</span> and <span class='gradient-highlight'>encrypted storage</span>.",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React Native", "Firebase", "HIPAA", "SecureStore", "Encryption"],
+    tags: ["Firebase", "SecureStore", "Docker"],
     demoUrl: undefined,
     githubUrl: "https://github.com/alexsu/healthcare-tracker"
   },
@@ -124,7 +124,7 @@ const microProjectsData = [
     title: "Mobile Performance Monitor",
     description: "Development tool for <span class='gradient-highlight'>React Native performance</span> monitoring with <span class='gradient-highlight'>Flipper integration</span> and <span class='gradient-highlight'>memory profiling</span>.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React Native", "Flipper", "Performance", "Debugging", "Monitoring"],
+    tags: ["Flipper", "Monitoring", "Git"],
     demoUrl: undefined,
     githubUrl: "https://github.com/alexsu/rn-performance-monitor"
   }
