@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Home, User, Briefcase, Code, GraduationCap, Mail, FolderKanban } from 'lucide-react';
+import { Home, User, Briefcase, Code, GraduationCap, Mail, FolderKanban, LucideIcon } from 'lucide-react';
 
 export interface Tab {
   id: string;
   label: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
 }
 
 export const tabs: Tab[] = [
@@ -104,7 +104,7 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;

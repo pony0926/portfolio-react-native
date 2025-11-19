@@ -81,7 +81,7 @@ export const getCompanyGradient = (company: string): string => {
 };
 
 // Get app icon with fallback
-export const getAppIcon = (projectId: string, company: string): string => {
+export const getAppIcon = (projectId: string, _company: string): string => {
   const bundleInfo = appBundleIds[projectId];
   if (bundleInfo?.ios) {
     return getAppIconUrl(bundleInfo.ios, bundleInfo.appStoreId);
@@ -93,7 +93,7 @@ export const getAppIcon = (projectId: string, company: string): string => {
 };
 
 // App-specific visual representations (for fallback)
-export const getAppVisual = (projectId: string, company: string, title: string): { icon: string; color: string; text: string } => {
+export const getAppVisual = (projectId: string, company: string, _title: string): { icon: string; color: string; text: string } => {
   const visuals: Record<string, { icon: string; color: string; text: string }> = {
     'yahoo-mail': { icon: '📧', color: 'from-purple-500 to-blue-500', text: 'Yahoo Mail' },
     'yahoo-finance': { icon: '📈', color: 'from-green-500 to-blue-500', text: 'Yahoo Finance' },
