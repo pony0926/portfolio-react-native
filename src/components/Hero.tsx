@@ -1,136 +1,147 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
-import AnimatedText from './AnimatedText';
-import { CloudDownload } from './CloudDownload';
-import { LayoutGrid } from './LayoutGrid';
-import { FileChartColumn } from './FileChartColumn';
+import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { profile } from '../data/resume';
 
-const Hero = () => {
-
-  const handleResumeView = () => {
-    window.open('/assets/resume.pdf', '_blank');
+export default function Hero() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.2,
+      },
+    },
   };
 
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/resume.pdf'; // Updated to your resume file location
-    link.download = 'AlexSuResume.pdf'; // Updated to your new resume file
-    link.click();
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-36">
-      <div className="container mx-auto px-6 z-10 relative">
-        <div className="max-w-6xl mx-auto text-center px-4">
-          <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-white"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <span className="block mb-4">Hi, I am Alex Su</span>
-            <span className="block mt-6">
-              <span className="block mb-3 sm:mb-4">
-                <span className="text-[#60a5fa] font-semibold">Senior React Native Engineer</span> <span className="text-white">specializing in</span>
-              </span>
-              <span className="block mb-3 sm:mb-4 text-white">
-                cross-platform mobile development, AI
-              </span>
-              <span className="block mb-3 sm:mb-4 text-white">
-                integration,
-              </span>
-              <span className="block">
-                <span className="text-[#60a5fa] font-semibold">scalable backend development.</span>
-              </span>
-            </span>
-          </motion.h1>
-          
-          <motion.h2 
-            className="text-lg md:text-xl text-gray-400 mb-8 font-medium"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            <span className="block">I build</span>
-            <AnimatedText 
-              text={[
-                " Cross-platform mobile apps ", 
-                "AI-powered mobile features", 
-                "Scalable backend systems",
-                "High-performance mobile solutions"
-              ]} 
-              className="text-[#60a5fa] font-medium" 
-            />
-          </motion.h2>
-          
-          <motion.p 
-            className="text-base mb-10 text-gray-400"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-          >
-           Creating fast, smooth, and intelligent mobile experiences with cutting-edge technology and innovative solutions.
-          </motion.p>
-          
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
-          >
-            <a href="#projects" className="gradient-border-button">
-              <LayoutGrid width={20} height={20} stroke="#ffffff" />
-              My Work
-            </a>
-            <div className="flex items-center gap-2">
-              <button 
-                className="gradient-border-button"
-                onClick={handleResumeView}
-              >
-                <FileChartColumn width={20} height={20} stroke="#ffffff" />
-                Resume
-              </button>
-              <button 
-                className="gradient-border-button download-btn"
-                onClick={handleResumeDownload}
-                title="Download Resume"
-              >
-                <CloudDownload width={20} height={20} stroke="#ffffff" />
-              </button>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="mt-16 flex justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-          >
-            <div className="animate-bounce p-2 bg-blue-900/30 rounded-full border border-blue-500/20">
-              <a href="#technologies" className="text-blue-400">
-                <svg 
-                  className="w-6 h-6" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3" 
-                  />
-                </svg>
-              </a>
-            </div>
-          </motion.div>
-        </div>
+    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden px-4 sm:px-6">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500/20 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
       </div>
-    </section>
-  );
-};
 
-export default Hero;
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-center"
+        >
+          <motion.div variants={itemVariants}>
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-gradient"
+              whileHover={{ scale: 1.02 }}
+            >
+              {profile.name}
+            </motion.h1>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mb-8">
+              {profile.title}
+            </h2>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Building mobile applications used by millions. Specialized in React Native, TypeScript, and modern mobile architectures.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap justify-center gap-4 mb-12"
+          >
+            <motion.a
+              href={`mailto:${profile.email}`}
+              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-medium shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/50 transition-all"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Mail size={20} />
+              Email
+            </motion.a>
+            <motion.a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 glass-effect text-blue-400 rounded-full font-medium hover:bg-gray-800/80 transition-all border border-blue-500/30"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Linkedin size={20} />
+              LinkedIn
+            </motion.a>
+            <motion.a
+              href="https://github.com/Alex-rn-eng"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 glass-effect text-purple-400 rounded-full font-medium hover:bg-gray-800/80 transition-all border border-purple-500/30"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Github size={20} />
+              GitHub
+            </motion.a>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
+          >
+            <div className="flex items-center gap-2">
+              <Phone size={16} />
+              <span>{profile.phone}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={16} />
+              <span>{profile.email}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>📍</span>
+              <span>{profile.location}</span>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      <style>{`
+        @keyframes blob {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
+    </div>
+  );
+}

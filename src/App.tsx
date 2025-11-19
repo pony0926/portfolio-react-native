@@ -1,50 +1,81 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import LoadingScreen from "./components/LoadingScreen";
-import { useLoading } from "./hooks/useLoading";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import TabNavigation from './components/TabNavigation';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import Contact from './components/Contact';
 
-const queryClient = new QueryClient();
+function App() {
+  const [activeTab, setActiveTab] = useState('home');
 
-const AppContent = () => {
-  const isLoading = useLoading(3000); // 3 second loading time
+  const tabContent: Record<string, React.ReactNode> = {
+    home: <Hero />,
+    about: <About />,
+    experience: <Experience />,
+    projects: <Projects />,
+    skills: <Skills />,
+    education: <Education />,
+    contact: <Contact />,
+  };
 
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      y: 20,
+      scale: 0.98,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      scale: 0.98,
+      transition: {
+        duration: 0.3,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
 
   return (
-    <div className="min-h-screen w-full font-sans relative">
-      {/* Clean Professional Background */}
-      <div className="fixed inset-0 z-0 professional-bg"></div>
-      <div className="relative z-10">
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            {/* <Route path="/blog" element={<BlogList />} /> */}
-            {/* <Route path="/blog/:id" element={<BlogPost />} /> */}
-            {/* <Route path="/micro-projects" element={<MicroProjects />} /> */}
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+    <div className="min-h-screen bg-gray-950">
+      <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+      
+      <main className="relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="min-h-[calc(100vh-4rem)]"
+          >
+            {tabContent[activeTab]}
+          </motion.div>
+        </AnimatePresence>
+      </main>
+
+      <footer className="border-t border-gray-800/50 bg-gray-900/50 py-8 mt-12">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-sm text-gray-500">
+            © {new Date().getFullYear()} Alexander Su. Built with React, TypeScript, and Tailwind CSS.
+          </p>
+        </div>
+      </footer>
     </div>
   );
-};
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <AppContent />
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+}
 
 export default App;

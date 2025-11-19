@@ -1,125 +1,82 @@
-# 🚀 Professional Portfolio
+# Alexander Su - Portfolio
 
-<div align="center">
+A modern, beautiful portfolio website showcasing my experience as a Senior Software Engineer specializing in React Native and mobile development.
 
-![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-blue)
-![React](https://img.shields.io/badge/React-18.2.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue)
-![Tailwind](https://img.shields.io/badge/Tailwind-3.3.0-blue)
+## Features
 
-A modern, responsive portfolio website showcasing professional experience, projects, and technical expertise in a clean and interactive interface.
+- 🎨 Modern, responsive design with smooth animations
+- ⚡ Built with React + TypeScript for type safety
+- 🎭 Framer Motion for smooth animations and transitions
+- 💅 Tailwind CSS for modern styling
+- 📱 Fully responsive across all devices
+- 🚀 Optimized performance with Vite
 
-</div>
+## Tech Stack
 
-## ✨ Features
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Lucide React** - Icon library
 
-- 🎨 **Responsive Design**: Optimized for all screen sizes and devices
-- 💫 **Modern UI/UX**: Clean and professional interface with smooth animations
-- 🎮 **Interactive Components**: Engaging user interactions and transitions
-- 📝 **Blog System**: Integrated blog platform with markdown support
-- 🏆 **Project Showcase**: Dynamic project display with detailed information
-- 📬 **Contact Section**: Professional contact form with validation
-- 🤖 **AI Lab**: Interactive AI demonstration section
-- 🌙 **Dark Mode**: Elegant dark theme optimized for readability
-
-## 🛠️ Tech Stack
-
-- **Frontend Framework**: React with TypeScript
-- **Styling**: Tailwind CSS with custom animations
-- **State Management**: React Query
-- **Routing**: React Router
-- **Animations**: Framer Motion
-- **UI Components**: Custom components with shadcn/ui
-- **Markdown Support**: React Markdown
-- **Icons**: Lucide Icons
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+- Node.js 18+ and npm/yarn/pnpm
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/kalpsenghani/portfolio.git
-   ```
+1. Install dependencies:
+```bash
+npm install
+```
 
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
+2. Start the development server:
+```bash
+npm run dev
+```
 
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+3. Build for production:
+```bash
+npm run build
+```
 
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+4. Preview production build:
+```bash
+npm run preview
+```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-portfolio/
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/         # Page components
-│   ├── lib/           # Utility functions and data
-│   ├── styles/        # Global styles and Tailwind config
-│   └── types/         # TypeScript type definitions
-├── public/            # Static assets
-└── package.json       # Project dependencies and scripts
+│   ├── components/     # React components
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Education.tsx
+│   │   ├── Contact.tsx
+│   │   └── Navigation.tsx
+│   ├── data/          # Resume data
+│   │   └── resume.ts
+│   ├── App.tsx         # Main app component
+│   ├── main.tsx        # Entry point
+│   └── index.css       # Global styles
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+└── vite.config.ts
 ```
 
-## 🎨 Customization
+## Customization
 
-### Adding Projects
-Edit the project data in `src/lib/project-data.ts` to add or modify projects.
+All resume data is stored in `src/data/resume.ts`. Update this file to customize your portfolio content.
 
-### Modifying Blog Posts
-Update blog content in `src/lib/blog-data.ts` to manage blog posts.
+## License
 
-### Styling
-The project uses Tailwind CSS for styling. Custom styles can be added in:
-- `src/styles/globals.css`
-- `tailwind.config.js`
+Personal portfolio - All rights reserved
 
-## 📦 Deployment
-
-The project can be deployed to any static hosting service:
-
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-
-2. Deploy the `dist` directory to your preferred hosting service.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-For any inquiries or suggestions, please reach out through the contact form on the portfolio website.
-
----
-
-<div align="center">
-Made with ❤️ by Kalp Senghani
-</div>
